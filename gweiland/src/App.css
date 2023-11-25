@@ -1,38 +1,166 @@
-.App {
+#app {
+  height: 100%;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
   text-align: center;
-}
+  font-size: 18px;
+  background: #fff;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* Center slide text vertically */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  background: #000;
+  color: #000;
 }
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 90%;
+  box-sizing: border-box;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slideContent {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.left-text-div {
+    font-weight: 800;
+    font-size: 68px;
+    align-items: start;
+    flex-direction: column;
+    display: flex;
+    max-width: 500px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+}
+.right-text-div {
+        font-weight: 800;
+    font-size: 68px;
+    align-items: start;
+    flex-direction: column;
+    display: flex;
+    max-width: 500px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    text-align: center;
+    z-index: 1;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.aaa {
+    margin-top: 2%;
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10rem;
+    color: #34444e;
+    font-size: 1rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: white;
+}
+
+.aaa::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #34444e;
+    transition: height 0.5s, top 0.5s;
+    z-index: -1;
+}
+
+.aaa:hover {
+    color: white;
+}
+
+.aaa:hover::after {
+    height: 100%;
+    top: 0;
+}
+
+
+
+
