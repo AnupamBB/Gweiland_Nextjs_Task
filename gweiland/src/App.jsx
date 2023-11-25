@@ -1,5 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
-// Import Swiper React components
+import React, { useState} from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -11,11 +10,6 @@ import './App.css';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import angular1 from '../src/assets/images/angular.jpeg';
-import angular2 from '../src/assets/images/angular.jpeg';
-import angular3 from '../src/assets/images/angular.jpeg';
-import angular4 from '../src/assets/images/angular.jpeg';
-import angular5 from '../src/assets/images/angular.jpeg';
 import CustomNavbar from "./components/CustomNavbar";
 import Announcement from "./components/Announcement";
 import Carousel from "./components/Carousel";

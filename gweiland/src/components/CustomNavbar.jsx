@@ -19,11 +19,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import Button from '@mui/material/Button';
-import EditIcon from '@mui/icons-material/Edit';
 import Divider from '@mui/material/Divider';
-import ArchiveIcon from '@mui/icons-material/Archive';
-import FileCopyIcon from '@mui/icons-material/FileCopy';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 const StyledMenu = styled((props) => (
   <Menu
@@ -152,19 +148,33 @@ export default function CustomNavbar() {
       <AppBar position="static" style={{backgroundColor: '#212122'}}>
         <Toolbar style={{ backgroundColor: '#212122', display: 'flex', flexWrap: 'wrap' }}>
           <div>
-            <Button
-                id="demo-customized-button"
-                aria-controls={open ? 'demo-customized-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                variant="contained"
-                disableElevation
-                onClick={handleClick}
-                endIcon={<KeyboardArrowDownIcon />}
-                style={{textTransform: 'lowercase',backgroundColor: 'transparent', fontWeight: 600}}
-            >
-              brands
-            </Button>
+                <Button
+      id="demo-customized-button"
+      aria-controls={open ? 'demo-customized-menu' : undefined}
+      aria-haspopup="true"
+      aria-expanded={open ? 'true' : undefined}
+      variant="contained"
+      disableElevation
+      onClick={handleClick}
+      endIcon={<KeyboardArrowDownIcon />}
+      style={{
+        textTransform: 'lowercase',
+        backgroundColor: 'transparent',
+        fontWeight: 600,
+        borderBottom: '2px solid transparent', // Initial transparent bottom border
+        transition: 'border-color 0.3s ease', // Smooth transition for the border change
+         borderRadius: 0,
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderBottom = '2px solid #e1c200'; // Change border color on hover
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderBottom = '2px solid transparent'; // Restore initial border color on mouse leave
+      }}
+    >
+      brands
+    </Button>
+
             <StyledMenu
                 id="demo-customized-menu"
                 MenuListProps={{
@@ -190,19 +200,32 @@ export default function CustomNavbar() {
             </StyledMenu>
           </div>
           <div>
-            <Button
-                id="demo-customized-button"
-                aria-controls={open ? 'demo-customized-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                variant="contained"
-                disableElevation
-                onClick={handleClick}
-                endIcon={<KeyboardArrowDownIcon />}
-                style={{textTransform: 'lowercase',backgroundColor: 'transparent', fontWeight: 600}}
-            >
-              shops
-            </Button>
+    <Button
+      id="demo-customized-button"
+      aria-controls={open ? 'demo-customized-menu' : undefined}
+      aria-haspopup="true"
+      aria-expanded={open ? 'true' : undefined}
+      variant="contained"
+      disableElevation
+      onClick={handleClick}
+      endIcon={<KeyboardArrowDownIcon />}
+      style={{
+        textTransform: 'lowercase',
+        backgroundColor: 'transparent',
+        fontWeight: 600,
+        borderBottom: '2px solid transparent', // Initial transparent bottom border
+        transition: 'border-color 0.3s ease', // Smooth transition for the border change
+         borderRadius: 0,
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderBottom = '2px solid #e1c200'; // Change border color on hover
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderBottom = '2px solid transparent'; // Restore initial border color on mouse leave
+      }}
+    >
+      shops
+    </Button>
             <StyledMenu
                 id="demo-customized-menu"
                 MenuListProps={{
@@ -235,7 +258,20 @@ export default function CustomNavbar() {
                 variant="contained"
                 disableElevation
                 onClick={handleClick}
-                style={{textTransform: 'lowercase',backgroundColor: 'transparent', fontWeight: 600}}
+                style={{
+                    textTransform: 'lowercase',
+                    backgroundColor: 'transparent',
+                    fontWeight: 600,
+                    borderBottom: '2px solid transparent',
+                    transition: 'border-color 0.3s ease',
+                    borderRadius: 0,
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderBottom = '2px solid #e1c200'; // Change border color on hover
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderBottom = '2px solid transparent'; // Restore initial border color on mouse leave
+      }}
             >
               premium
             </Button>
@@ -247,7 +283,20 @@ export default function CustomNavbar() {
                 variant="contained"
                 disableElevation
                 onClick={handleClick}
-                style={{textTransform: 'lowercase',backgroundColor: 'transparent', fontWeight: 600}}
+                style={{
+                    textTransform: 'lowercase',
+                    backgroundColor: 'transparent',
+                    fontWeight: 600,
+                    borderBottom: '2px solid transparent',
+                    transition: 'border-color 0.3s ease',
+                    borderRadius: 0,
+                }}
+                onMouseEnter={(e) => {
+                    e.currentTarget.style.borderBottom = '2px solid #e1c200';
+                }}
+                onMouseLeave={(e) => {
+                    e.currentTarget.style.borderBottom = '2px solid transparent';
+                }}
             >
               gift cards
             </Button>
@@ -259,16 +308,37 @@ export default function CustomNavbar() {
             />
           </Box>
           <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Button
-                id="demo-customized-button"
-                aria-controls={open ? 'demo-customized-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? 'true' : undefined}
-                variant="contained"
-                disableElevation
-                onClick={handleClick}
-                style={{textTransform: 'lowercase',backgroundColor: 'transparent', fontWeight: 600}}
+            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+                <Button
+
+                    id="demo-customized-button"
+
+                    aria-controls={open ? 'demo-customized-menu' : undefined}
+
+                    aria-haspopup="true"
+
+                    aria-expanded={open ? 'true' : undefined}
+
+                    variant="contained"
+
+                    disableElevation
+
+                    onClick={handleClick}
+
+                    style={{
+                        textTransform: 'lowercase',
+                        backgroundColor: 'transparent',
+                        fontWeight: 600,
+                        borderBottom: '2px solid transparent',
+                        transition: 'border-color 0.3s ease',
+                        borderRadius: 0,
+                    }}
+                    onMouseEnter={(e) => {
+                        e.currentTarget.style.borderBottom = '2px solid #e1c200';
+                    }}
+                    onMouseLeave={(e) => {
+                        e.currentTarget.style.borderBottom = '2px solid transparent';
+                    }}
             >
               become an affiliate
             </Button>

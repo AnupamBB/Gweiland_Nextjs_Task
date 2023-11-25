@@ -147,4 +147,6 @@ const Image = styled.img`
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-bottom-left-radius: 200px;
   border-top-left-radius: 200px;
+  border: 2px solid black;
+  background-color: black;
 `;
